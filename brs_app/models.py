@@ -10,7 +10,7 @@ class Brsbook(models.Model):
     content = models.TextField()
     cost = models.IntegerField()
     comment = models.TextField(null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
     
     def __str__(self):
         return self.title
