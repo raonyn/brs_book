@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'brs_app.apps.BrsAppConfig',
+    'brs_cal.apps.BrsCalConfig',
     'account.apps.AccountConfig',
  #   'book.apps.BookConfig',
     
