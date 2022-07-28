@@ -55,8 +55,9 @@ USE_TZ = True
 
 13. settings.py DATABASES 변경
 
-#   'ENGINE': 'django.db.backends.sqlite3',
-#   'NAME': BASE_DIR / 'db.sqlite3',
+
+        #   'ENGINE': 'django.db.backends.sqlite3',
+        #   'NAME': BASE_DIR / 'db.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgresql_db',
         'USER': 'admin',
