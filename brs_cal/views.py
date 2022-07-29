@@ -10,8 +10,8 @@ import json
 from account.models import *
 
 
-def index(request):
-    return HttpResponse(request, 'login.html')
+def cal(request):
+    return render(request, '../templates/brs_cal/cal.html')
 
 '''
 def main(request):

@@ -61,7 +61,8 @@ ROOT_URLCONF = 'brs_book.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+#        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,7 +136,8 @@ STATIC_URL = '/static/'
 
 # 관리할 앱 내의 static 디렉터리
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'brs_app', 'static')
+    os.path.join(BASE_DIR, 'brs_app', 'static'),
+    os.path.join(BASE_DIR, 'brs_cal', 'static'),
 ]
 
 # 루트 static 디렉터리

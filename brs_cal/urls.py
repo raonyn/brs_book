@@ -7,7 +7,7 @@ from . import views
 app_name = 'brs_cal'
 
 urlpatterns = [
-    path('index', views.index, name="cal"),
+    path('cal', views.cal, name="cal"),
 ]
 
 
