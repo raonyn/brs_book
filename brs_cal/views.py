@@ -1,19 +1,19 @@
-
 from django.shortcuts import render, redirect
 
-'''
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
-from main.forms import UserForm
+#from main.forms import UserForm
 import calendar
 import json
-from .models import Month, Day
+#from .models import Month, Day
 from account.models import *
 
 
 def index(request):
     return HttpResponse(request, 'login.html')
 
+'''
 def main(request):
     yearCalender = calendar.HTMLCalendar().formatyear(2022)
     context = {

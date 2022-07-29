@@ -23,9 +23,8 @@ def create(request):
         post.user = request.user
         post.save()
         return redirect('/detail/' + str(post.id))
-     #   return render(request, 'index.html')
     else:
-        return render(request, 'error.html')
+        return render(request, 'new.html')
 
 def detail(request, post_id):
     post = get_object_or_404(Brsbook, pk=post_id)

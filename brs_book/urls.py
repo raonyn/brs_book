@@ -20,6 +20,7 @@ from pip import main
 
 import account.views
 import brs_app.views
+import brs_cal.views
   
 urlpatterns = [
     path('brsadm/', admin.site.urls),
@@ -31,4 +32,5 @@ urlpatterns = [
     path('new/', brs_app.views.new, name='new'),
     path('create/', brs_app.views.create, name='create'),
     path('delete/<int:post_id>/', brs_app.views.delete, name='delete'),
+    path('calendar/', include('brs_cal.urls')),
 ]
