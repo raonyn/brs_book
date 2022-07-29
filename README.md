@@ -89,3 +89,7 @@ py manager.py startapp brs_app
 15. settings.py INSTALLED_APPS에 추가
 
 16. 앱 모델 추가
+
+
+** Terry 님의 자료를 참조하였습니다 (https://dheldh77.tistory.com) **
+
