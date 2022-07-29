@@ -21,16 +21,17 @@ from pip import main
 import account.views
 import brs_app.views
 import brs_cal.views
-  
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('brsadm/', admin.site.urls),
     path('', brs_app.views.index, name='index'),
     path('login/', account.views.login, name='login'),
     path('signup/', account.views.signup, name='signup'),
     path('logout/', account.views.logout, name='logout'),
-    path('detail/<int:post_id>/', brs_app.views.detail, name='detail'),
-    path('new/', brs_app.views.new, name='new'),
-    path('create/', brs_app.views.create, name='create'),
-    path('delete/<int:post_id>/', brs_app.views.delete, name='delete'),
-    path('calendar/', include('brs_cal.urls')),
-]
+    path('brs_app/', include('brs_app.urls')),
+    path('brs_cal/', include('brs_cal.urls')),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

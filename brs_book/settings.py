@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -128,7 +130,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+#STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
+# 관리할 앱 내의 static 디렉터리
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'brs_app', 'static')
+]
+
+# 루트 static 디렉터리
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# 미디어 파일을 관리할 루트 media 디렉터리
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# 각 media file에 대한 URL prefix
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
