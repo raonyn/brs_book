@@ -63,7 +63,7 @@ purchase.addEventListener('click', ()=>{
     reqDay =  $('.infoDay').html();
     $.ajax({
         type: "POST",
-        url: "http://localhost:8000/checkSeat",
+        url: "http://localhost:8000/brs_cal/checkSeat",
         data: {'reqDay': reqDay, 'conCheck': "purchase", 'selMonth': selMonth},
         dataType: "json",
         success: function(response){
@@ -131,4 +131,5 @@ var fillDate = (tMonth, tDay, tColor) => {
 selDateList = [24, 29, 30];
 window.onload = () =>{
     fillDate('May', selDateList, '#ccffbf')
+//    fillDate('August', selDateList, '#ccffbf')
 }

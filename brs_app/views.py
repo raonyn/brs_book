@@ -9,13 +9,13 @@ from .models import Brsbook
 
 def index(request):
     posts = Brsbook.objects.all()
-    return render(request, '../templates/brs_app/index.html', {'posts': posts})
+    return render(request, 'brs_app/index.html', {'posts': posts})
 
 
 
 def detail(request, post_id):
     post = get_object_or_404(Brsbook, pk=post_id)
-    return render(request, '../templates/brs_app/detail.html', {'post' : post})
+    return render(request, 'brs_app/detail.html', {'post' : post})
 ''''
 def new(request):
     return render(request, 'new.html')
@@ -34,10 +34,10 @@ def create(request):
         post.save()
         return redirect('/brs_app/detail/' + str(post.id))
     else:
-        return render(request, '../templates/brs_app/new.html')
+        return render(request, 'brs_app/new.html')
 
 def home(request):
-    return render(request, '../templates/brs_app/index.html')
+    return render(request, 'brs_app/index.html')
 
 '''''
 def edit(request, post_id):
@@ -66,7 +66,7 @@ def update(request, post_id):
         return redirect('/brs_app/detail/' + str(post.id))
     else:
         post = get_object_or_404(Brsbook, pk=post_id)
-        return render(request, '../templates/brs_app/edit.html', {'post' : post})
+        return render(request, 'brs_app/edit.html', {'post' : post})
     
 def delete(request, post_id):
     # 삭제할 레코드의 id 값을 get_object_or_404 메소드의 파라미터로 전달

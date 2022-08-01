@@ -11,16 +11,17 @@ from account.models import *
 
 
 def cal(request):
-    return render(request, '../templates/brs_cal/cal.html')
+    return render(request, 'brs_cal/cal.html')
 
-'''
+
 def main(request):
     yearCalender = calendar.HTMLCalendar().formatyear(2022)
     context = {
         'YC': yearCalender,
     }
-    return render(request, 'main.html', context)
+    return render(request, 'brs_cal/main.html', context)
 
+'''
 def viewSeat(request):
     month_list = Month.objects.all()
     dateDay = request.POST.get('dateDay')

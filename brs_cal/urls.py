@@ -8,6 +8,9 @@ app_name = 'brs_cal'
 
 urlpatterns = [
     path('cal', views.cal, name="cal"),
+    path('main', views.main, name="main"),
+#    path('login', auth_views.LoginView.as_view(template_name="login.html"), name="login"),
+
 ]
 
 

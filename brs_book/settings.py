@@ -62,7 +62,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 #        'DIRS': [],
-        'DIRS': [BASE_DIR / 'templates'],
+#        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,12 +137,13 @@ STATIC_URL = '/static/'
 
 # 관리할 앱 내의 static 디렉터리
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'brs_app', 'static'),
-    os.path.join(BASE_DIR, 'brs_cal', 'static'),
+    #os.path.join(BASE_DIR, 'brs_app', 'static'),
+    #os.path.join(BASE_DIR, 'brs_cal', 'static'),
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # 루트 static 디렉터리
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # 미디어 파일을 관리할 루트 media 디렉터리
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
