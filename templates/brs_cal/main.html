@@ -4,6 +4,7 @@
 
 <a class="loginTab" href=""></a>
 
+
 <div class="calender">
     {{ YC|safe }}
 </div>
@@ -12,6 +13,7 @@
     <div class="btn prev">PREV</div>
     <div class="btn next">NEXT</div>
 </div>
+
 
 <div class="infoBar">
     <div class="infoBar-left">
@@ -44,11 +46,14 @@
     </div>
 </div>
 
+
+
 <form id="dateSelForm" method="POST" action="">
+<!-- <form id="dateSelForm" method="POST" action="{% url 'create' %}"> -->
     <input id="monthForm" value="" type="hidden">
     <input id="dayForm" value="" type="hidden">
 </form>
 
-<script src="{% static 'brs_cal/js/script.js' %}"></script>
+<script src="{% static 'js/brs_cal/script.js' %}"></script>
 
 {% endblock %}

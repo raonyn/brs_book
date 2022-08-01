@@ -46,7 +46,8 @@ day.forEach((items)=>{
         dateDay = items.innerHTML;
         $.ajax({
             type: "POST",
-            url: "http://localhost:8000/viewSeat",
+         //   type: "GET",
+            url: "http://127.0.0.1:8000/viewSeat",
             data: {'dateDay': dateDay, 'selMonth': selMonth}, // 서버로 데이터 전송시 옵션
             dataType: "json", // 서버측에서 전송한 데이터를 어떤 형식의 데이터로서 해석할 것인가를 지정, 없으면 알아서 판단
             success: function(response){ // 통신 성공시

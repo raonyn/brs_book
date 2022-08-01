@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login
-#from main.forms import UserForm
+#from .forms import UserForm
 import calendar
 import json
 #from .models import Month, Day
@@ -21,7 +21,16 @@ def main(request):
     }
     return render(request, 'brs_cal/main.html', context)
 
-'''
+def viewSeat(request):
+    '''''
+    yearCalender = calendar.HTMLCalendar().formatyear(2022)
+    context = {
+        'YC': yearCalender,
+    }
+    '''
+    return render(request, 'brs_cal/cal.html')
+
+'''''
 def viewSeat(request):
     month_list = Month.objects.all()
     dateDay = request.POST.get('dateDay')
@@ -36,14 +45,6 @@ def viewSeat(request):
         'resSeat': resSeat,
     }
     return HttpResponse(json.dumps(context), content_type="application/json")
-
-
-def viewSeat(request):
-    yearCalender = calendar.HTMLCalendar().formatyear(2021)
-    context = {
-        'YC': yearCalender,
-    }
-    return render(request, 'main.html', context)
 
 def checkSeat(request):
     month_list = Month.objects.all()
@@ -97,11 +98,12 @@ def cancelSeat(request):
         'resSeat': resSeat,
     }
     return HttpResponse(json.dumps(context), content_type="application/json")
-
+'''
 
 dayMax = 32
 
 
+''''
 def saveData(request):
     global dayMax
     month_list = Month.objects.all()

@@ -1,9 +1,11 @@
+
 from django.db import models
 
 from django.db.models.fields.related import ManyToManyField
-from account.models import *
+from .models import *
 
 # Create your models here.
+
 '''
 class Month(models.Model):
     month = models.CharField(max_length=200, blank=True, null=True)
@@ -13,4 +15,4 @@ class Day(models.Model):
     remain_seat = models.IntegerField(blank=True, null=True)
     f_month = models.ForeignKey(Month, on_delete=models.CASCADE, blank=True, null=True)
     
-    '''
+'''
