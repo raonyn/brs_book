@@ -33,5 +33,6 @@ urlpatterns = [
     path('logout/', account.views.logout, name='logout'),
     path('brs_app/', include('brs_app.urls')),
     path('brs_cal/', include('brs_cal.urls')),
+    path('calendar', brs_cal.views.main, name='calendar'),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

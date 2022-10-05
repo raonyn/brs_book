@@ -39,6 +39,9 @@ def create(request):
 def home(request):
     return render(request, 'brs_app/index.html')
 
+def calendar(request):
+    return render(request, 'brs_cal/main.html')
+
 '''''
 def edit(request, post_id):
     # 매개변수로 전달받은 id에 해당하는 post 객체를 불러온다.

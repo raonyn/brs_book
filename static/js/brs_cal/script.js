@@ -59,6 +59,7 @@ day.forEach((items)=>{
     });
 });
 
+/*
 const purchase = document.querySelector('.purchase-box');
 purchase.addEventListener('click', ()=>{
     reqDay =  $('.infoDay').html();
@@ -72,6 +73,12 @@ purchase.addEventListener('click', ()=>{
         },
         error: function(request, status, error){},
     });
+});
+*/
+
+const purchase = document.querySelector('.purchase-box');
+purchase.addEventListener('click', ()=>{
+    window.location = 'http://127.0.0.1:8000/brs_app/create/';
 });
 
 const cancel = document.querySelector('.cancel-box');

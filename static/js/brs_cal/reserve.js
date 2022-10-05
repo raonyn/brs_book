@@ -2,7 +2,6 @@ const resvTab = document.querySelector('.resv-wrapper');
 const exitBtn = document.querySelector('.resv-close');
 exitBtn.addEventListener('click', ()=>{resvTab.classList.remove('open');});
 
-
 // 날짜별로 이벤트 등록용 함수 및 변수
 const selDate = []
 const dateFunc = ()=>{

@@ -13,6 +13,8 @@
 {% endif %}
 
 <a href="{% url 'create' %}">새글 작성</a>
+<a href="{% url 'calendar' %}">캘린더</a>
+
 {% for post in posts %}
     <h1>{{post.title}}</h1>
     <p>{{post.pub_date }}</p>

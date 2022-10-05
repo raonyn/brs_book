@@ -11,4 +11,5 @@ urlpatterns = [
     path('delete/<int:post_id>/', views.delete, name='delete'),
 #    path('edit/<int:post_id>/', brs_app.views.edit, name='edit'),
     path('update/<int:post_id>/', views.update, name='update'),
+    path('brs_cal', views.calendar, name='calendar'),
 ]
